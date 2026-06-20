@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd89b, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 380px;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.login-box h2 {
+  color: #ff6b35;
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 2px solid #ffd3c2;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 8px rgba(255,107,53,0.3);
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6b35;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #e85a2a;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.patita {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.ojo {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.ojo:hover {
+  transform: translateY(-50%) scale(1.1);
+}

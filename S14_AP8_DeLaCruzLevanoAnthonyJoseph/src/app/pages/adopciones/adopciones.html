@@ -1,0 +1,110 @@
+<h2 class="titulo-seccion">
+🐾 Mascotas en Adopción
+</h2>
+
+<div class="formulario">
+
+<h2>Registrar Nueva Mascota</h2>
+
+<input
+type="text"
+placeholder="Nombre"
+[(ngModel)]="nuevaMascota.nombre">
+
+<input
+type="text"
+placeholder="Edad"
+[(ngModel)]="nuevaMascota.edad">
+
+<input
+type="text"
+placeholder="Raza"
+[(ngModel)]="nuevaMascota.raza">
+
+<input
+type="text"
+placeholder="Sexo"
+[(ngModel)]="nuevaMascota.sexo">
+
+<input
+type="text"
+placeholder="Estado"
+[(ngModel)]="nuevaMascota.estado">
+
+<input
+type="text"
+placeholder="URL Imagen"
+[(ngModel)]="nuevaMascota.imagen">
+
+<button (click)="agregarMascota()">
+Agregar Mascota
+</button>
+
+</div>
+
+<div class="galeria">
+
+@for(mascota of mascotas; track mascota){
+
+<div
+class="pet-card"
+(click)="seleccionarMascota(mascota)">
+
+<img [src]="mascota.imagen">
+
+<div class="pet-info">
+
+<h3>
+{{ mascota.nombre }}
+</h3>
+
+<p>
+{{ mascota.edad }}
+</p>
+
+</div>
+
+</div>
+
+}
+
+</div>
+
+@if(mascotaSeleccionada){
+
+<div class="detalle-mascota">
+
+<h2>
+🐾 {{ mascotaSeleccionada.nombre }}
+</h2>
+
+<img
+[src]="mascotaSeleccionada.imagen">
+
+<div class="detalle-info">
+
+<p>
+<strong>Edad:</strong>
+{{ mascotaSeleccionada.edad }}
+</p>
+
+<p>
+<strong>Raza:</strong>
+{{ mascotaSeleccionada.raza }}
+</p>
+
+<p>
+<strong>Sexo:</strong>
+{{ mascotaSeleccionada.sexo }}
+</p>
+
+<p>
+<strong>Estado:</strong>
+{{ mascotaSeleccionada.estado }}
+</p>
+
+</div>
+
+</div>
+
+}

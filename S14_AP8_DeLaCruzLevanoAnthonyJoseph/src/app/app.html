@@ -1,0 +1,36 @@
+<header class="hero" *ngIf="mostrarLayout()">
+  <div class="overlay">
+    <h1>🐾 Patitas Felices</h1>
+    <p>Centro de adopción y bienestar animal</p>
+
+    <a routerLink="/adopciones" class="btn">
+      Ver Mascotas
+    </a>
+  </div>
+</header>
+
+<nav *ngIf="mostrarLayout()">
+  <a routerLink="/home" routerLinkActive="active">
+    Inicio
+  </a>
+
+  <a routerLink="/adopciones" routerLinkActive="active">
+    Adopciones
+  </a>
+
+  <a routerLink="/servicios" routerLinkActive="active">
+    Servicios
+  </a>
+
+  <a routerLink="/contacto" routerLinkActive="active">
+    Contacto
+  </a>
+</nav>
+
+<div class="contenido">
+  <router-outlet></router-outlet>
+</div>
+
+<footer *ngIf="mostrarLayout()">
+  © 2026 Patitas Felices | Proyecto Angular Routing
+</footer>
